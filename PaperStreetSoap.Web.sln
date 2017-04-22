@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperStreetSoap.Web", "PaperStreetSoap.Web\PaperStreetSoap.Web.csproj", "{46C7EDA8-E2D0-4619-9D5D-FF6BB252411C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperStreetSoap.StatusApi", "PaperStreetSoap.StatusApi\PaperStreetSoap.StatusApi.csproj", "{CF61F222-CBCC-45E6-9310-158B10DA0E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperStreetSoap.Admin", "PaperStreetSoap.Admin\PaperStreetSoap.Admin.csproj", "{CAB83261-22D4-436B-843B-614243500336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{46C7EDA8-E2D0-4619-9D5D-FF6BB252411C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46C7EDA8-E2D0-4619-9D5D-FF6BB252411C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46C7EDA8-E2D0-4619-9D5D-FF6BB252411C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF61F222-CBCC-45E6-9310-158B10DA0E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF61F222-CBCC-45E6-9310-158B10DA0E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF61F222-CBCC-45E6-9310-158B10DA0E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF61F222-CBCC-45E6-9310-158B10DA0E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB83261-22D4-436B-843B-614243500336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB83261-22D4-436B-843B-614243500336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB83261-22D4-436B-843B-614243500336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB83261-22D4-436B-843B-614243500336}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

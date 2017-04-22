@@ -1,29 +1,31 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-<div class="jumbotron">
+﻿@model PaperStreetSoap.Web.Models.StatusLog[]
 
-    <h1>Status Info</h1>
-    <h2>Location: @ViewBag.Location</h2>
-    <h3>Site Status: @ViewBag.StatusCode</h3>
-    <div>
+    @{
+        ViewBag.Title = "Logs";
+    }
 
-
-        @if (ViewBag.StatusCode == HttpStatusCode.OK)
+    <h2 style="margin-top: 75px;">Status Logs</h2>
+<div class="container">
+    <table class="table-bordered" style="margin-top: 25px;">
+        <tr>
+            <th>Time</th>
+            <th>Application</th>
+            <th>Location</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var log in Model)
         {
-            <p><span><i class="fa fa-thumbs-up fa-3x" aria-hidden="true"></i></span></p>
+            <tr>
+                <td>@log.time</td>
+                <td>@log.application</td>
+                <td>@log.location</td>
+                <td>@log.status</td>
+            </tr>
         }
-        else if (ViewBag.StatusCode == HttpStatusCode.InternalServerError)
-        {
-            <p><span><i class="fa fa-thumbs-down fa-3x" aria-hidden="true"></i></span></p>
-        }
-        else
-        {
-            <p><span><i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i></span></p>
-        }
-    </div>
-    <div><input type="button" class="btn btn-success" value="Save Status" onclick="saveStatus()" /></div>
+    </table>
 </div>
+<br />
+<div><input type="button" class="btn btn-success" value="Save Status" onclick="saveStatus()" /></div>
 <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert" style="display: none">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -39,14 +41,13 @@
 <script>
     function saveStatus() {
         $.post("/api/status/save")
-            .done(function() {
+            .done(function () {
                 $("#message").text("Status was saved");
                 $('#alert').show();
             })
-            .fail(function(data) {
+            .fail(function (data) {
                 $('#failalert').show();
                 console.log(data);
             });
-        
     }
 </script>

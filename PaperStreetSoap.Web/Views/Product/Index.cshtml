@@ -1,0 +1,35 @@
+﻿@model PaperStreetSoap.Web.Models.SoapDocument[]
+
+@{
+    ViewBag.Title = "Soap";
+}
+<br />
+<br />
+<h3>Location: @ViewBag.Location</h3>
+    <h3>Status: @ViewBag.StatusCode</h3>
+
+<section id="one">
+    <div class="container wow fadeInUp container-fluid">
+        <h2>Soap</h2>
+        <p class="lead">
+            Cat ipsum dolor sit amet, slap owner's face at 5am until human fills <a href="http://v4-alpha.getbootstrap.com/">
+                food dish
+            </a>. Stares at <code>human</code> while pushing stuff off a table chew foot. Eat the <code>fat cats</code> food poop in the plant pot eat and
+            than sleep on your face sit on human. Purr chew foot, show belly swat at dog, and spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce.
+        </p>
+        <div class="card-group">
+            @foreach (var soap in @Model)
+            {
+                <!-- card -->
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="@soap.imageUrl" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">@soap.name</h4>
+                        <p class="card-text">@soap.description</p>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
