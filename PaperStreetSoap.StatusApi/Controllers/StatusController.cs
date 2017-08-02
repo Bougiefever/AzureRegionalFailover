@@ -170,5 +170,12 @@ namespace PaperStreetSoap.StatusApi.Controllers
 
             return Ok();
         }
+
+        [Route("mytest")]
+        [HttpGet]
+        public IHttpActionResult Test()
+        {
+            return Ok();
+        }
     }
 }

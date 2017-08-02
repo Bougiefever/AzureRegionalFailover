@@ -188,7 +188,8 @@
       <DependentUpon>StatusLog.dbml</DependentUpon>
     </None>
     <None Include="Properties\PublishProfiles\paperstreetapi-nc - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\paperstreetapi-sc - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\paperstreetapi-nc-Stage - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\paperstreetapi-nc-Stage - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
